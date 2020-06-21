@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.sky {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 600px;
+    width: 600px;
+    background: #2b83b2;
+    border: 25px solid #1b0404;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: inset 0 0 120px rgba(0, 0, 0, 0.6);
+    animation: mySky 7s linear infinite;
+}
+
+.sky::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.3); 
+    z-index: 1;
+}
+
+.fa-space-shuttle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    color: #f3f5f5; /* the font is considered to be a text */
+    font-size: 18rem;
+    animation: myShuttle 0.2s linear infinite;
+    text-shadow: -10px 16px 10px rgba(0, 0, 0, 0.3);
+}
+
+.clouds {
+    position: absolute;
+    color: #fff;
+    animation: myClouds 4s linear infinite;
+}
+
+.cloud-1 {
+    left: 15%;
+    font-size: 7rem;
+}
+
+.cloud-2 {
+    left: 45%;
+    font-size: 4rem;
+    animation-delay: -0.6;
+}
+
+.cloud-3 {
+    right: 20%;
+    font-size: 5rem;
+    z-index: -1;
+    animation-delay: -0.3;
+}
+
+@keyframes myShuttle {
+    0% {
+        transform: translate(-50%, -50%) rotate(-90deg) translate(0, 0);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(-90deg) translate(-5px, -5px);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-90deg) translate(0, 0);
+    }
+}
+
+@keyframes myClouds {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(1000%);
+    }
+}
+
+@keyframes mySky {
+    0% {
+        background: #154159;
+    }
+    30% {
+        background: #2675a0
+    }
+    70% {
+        background: #1e5b7c
+    }
+    100% {
+        background: #154159;
+    }
+}
