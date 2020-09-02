@@ -1,12 +1,6 @@
 # space-shuttle-animation
 Space shuttle animation - CSS3; 
 
-🔥 FOLLOW ME ON:
-
-🚀 https://github.com/b-husein 
-
-🚀 https://www.linkedin.com/in/pragmaticxyz/
-
 💻 USEFUL PLAYLISTS:
 
 👊 HTML5
